@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 
 client = MongoClient(
-    "mongodb+srv://keerthi:kk3600@cluster0.jd3jb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    "<mongo db cluter url>")
 NameListDatabase = client.NameListDatabase
 CollectionList = NameListDatabase.CollectionList
 
