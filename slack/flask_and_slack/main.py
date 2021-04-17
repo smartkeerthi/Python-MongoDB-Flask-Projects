@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import requests
 
 client = MongoClient(
-    "mongodb+srv://keerthi:kk3600@cluster0.jd3jb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    "<mongo db cluster url>")
 DatabaseName = client.assesment3
 CollectionName = DatabaseName.AssessmentCollection
 
@@ -34,7 +34,7 @@ def send_slack_message(user_name):
             user_message = name['message']
             mes = f'{user_name} -> {user_message}'
             messages = '{ "text":"%s" }' % mes
-            response = requests.post("https://hooks.slack.com/services/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",
+            response = requests.post("<slack webhook url >",
                                      data=messages)
             print(response.text)
 

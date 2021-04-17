@@ -4,7 +4,7 @@ from email.message import EmailMessage
 from pymongo import MongoClient
 
 client = MongoClient(
-    "mongodb+srv://keerthi:kk3600@cluster0.jd3jb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    "<Mongo Db cluster Url>")
 DatabaseName = client.assesment3
 CollectionName = DatabaseName.AssessmentCollection
 
@@ -13,9 +13,9 @@ def send_email_message(message_to_send, sender_email):
     try:
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("kkvasan3600@gmail.com", "keerthi@2000")
+        server.login("<email-id>", "<email-password>")
         email = EmailMessage()
-        email['From'] = 'kkvasan3600@gmail.com'
+        email['From'] = '<email-id>'
         email['To'] = sender_email
         email['Subject'] = 'Change in MongoDB collection'
         email.set_content(message_to_send)
@@ -30,7 +30,7 @@ def send_slack_message(message_to_send, user_name):
     try:
         mes = f'{user_name} -> {message_to_send}'
         messages = '{ "text":"%s" }' % mes
-        response = requests.post("https://hooks.slack.com/services/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",
+        response = requests.post("<slack webhook url >",
                                  data=messages)
         print(response.text)
 
