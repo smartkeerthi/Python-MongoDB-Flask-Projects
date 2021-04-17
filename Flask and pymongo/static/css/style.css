@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(41, 104, 155);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.nav h3{
+    letter-spacing: 2px;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: fit-content;
+    height: 150px;
+    background-color: rgb(43, 141, 221);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.formGroup{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.formGroup .inputText{
+    outline: none;
+    height: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn{
+    width: 150px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: rgb(8, 70, 163);
+    color: #fff;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nameListView{
+    position: fixed;
+    top: 40%;
+    left: 70%;
+    width: fit-content;
+    height: 250px;
+    background-color: blueviolet;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+

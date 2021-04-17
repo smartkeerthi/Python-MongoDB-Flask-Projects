@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <title>Flask api fetch</title>
+</head>
+<body>
+    <div id="main">
+        <div class="nav">
+            <h3>Api Data Fetching</h3>
+        </div>
+        <div class="page">
+            <form action="/" method="POST">
+                <div class="formGroup">
+                    <label class="label">Enter the Name :</label>
+                    <input type="text" name="Name" class="inputText">
+                </div>
+                <button class="btn" type="submit" value="submit">Fetch API</button>
+            </form>
+        </div>
+    </div>
+    <div class="nameListView">
+        <h2>Names in database</h2>
+        <br>
+        {% for name in listofname %}
+            <h4>{{ name }}</h4>
+        {% endfor %}
+    </div>
+</body>
+</html>
